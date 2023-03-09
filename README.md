@@ -20,3 +20,5 @@ raco pkg install iracket
 # register jupyter kernel
 raco iracket install
 ```
+### workaround for zeromq dylib
+May need to update racket to find `libzmq.5.dylib` according to [this issue](https://github.com/rmculpepper/iracket/issues/11#issuecomment-1107448577)
