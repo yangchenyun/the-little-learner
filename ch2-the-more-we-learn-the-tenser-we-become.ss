@@ -1,5 +1,9 @@
 ;; # Chapter 2 - The More We Learn, the Tenser We Become
 
+
+(require racket/include)
+(include "ch1-the-lines-sleep-tonight.ss")
+
 ;; scalars = real numbers
 (define pi 3.141592653589793)
 
@@ -62,13 +66,12 @@
 (eq? (length (shape t)) (rank t))
 
 ;; tail-recursion form of rank
-(define rank
-  (let ((ranked
-         (lambda (t a)
-           (cond ((scalar? t) a)
-                 (else (ranked (tensor-ref t 0) (+ 1 a))))
-           )))
-    (ranked t 0)))
+(define ranked
+  (lambda (t a)
+    (cond ((scalar? t) a)
+          (else (ranked (tensor-ref t 0) (+ 1 a))))))
+(define rank (lambda (t) (ranked t 0)))
+
 (rank t)
 
 ;; ## The Law of Simple Accumulator Passing
