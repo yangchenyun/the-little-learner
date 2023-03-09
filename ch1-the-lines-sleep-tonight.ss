@@ -20,13 +20,14 @@
 (define line-ys '(1.8 1.2 4.2 3.3))
 
 ;; Make plot on graph (Only works in REPL)
-(require plot)
-(plot-new-window? #t)
-(parameterize ([plot-width    150]
-                 [plot-height   150]
-                 [plot-x-label  #f]
-                 [plot-y-label  #f])
-    (list (plot (points (map vector line-xs line-ys)))))
+;;
+;; (require plot)
+;; (plot-new-window? #t)
+;; (parameterize ([plot-width    150]
+;;                  [plot-height   150]
+;;                  [plot-x-label  #f]
+;;                  [plot-y-label  #f])
+;;     (list (plot (points (map vector line-xs line-ys)))))
 
 ;; Concepts:
 ;; - learning. Finding parameters of a function from a dataset
