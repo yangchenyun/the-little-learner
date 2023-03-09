@@ -19,15 +19,17 @@
 (define line-xs '(2.0 1.0 4.0 3.0))
 (define line-ys '(1.8 1.2 4.2 3.3))
 
-;; Make plot on graph (Only works in REPL)
-;;
-;; (require plot)
-;; (plot-new-window? #t)
-;; (parameterize ([plot-width    150]
-;;                  [plot-height   150]
-;;                  [plot-x-label  #f]
-;;                  [plot-y-label  #f])
-;;     (list (plot (points (map vector line-xs line-ys)))))
+;; Make plot on graph, change to (require plot) for GUI
+(require plot/pict)
+(plot-new-window? #t)
+(parameterize (
+               [plot-aspect-ratio 1]
+               [plot-width    150]
+                 [plot-height   150]
+                 [plot-x-label  #f]
+                 [plot-y-label  #f])
+    (plot
+     (points (map vector line-xs line-ys)) #:x-min 0 #:y-min 0 #:x-max 5 #:y-max 5))
 
 ;; Concepts:
 ;; - learning. Finding parameters of a function from a dataset
