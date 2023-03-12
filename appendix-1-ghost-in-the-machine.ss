@@ -184,7 +184,7 @@
     (prim2 * (lambda (ra rb z) (values (* rb z) (* ra z)))))
   (define /-0-0
     (prim2 / (lambda (ra rb z) (values (* (/ 1.0 rb) z)
-                                  (* (/ (- ra) (* rb rb)))
+                                  (* (/ (- ra) (* rb rb)) z)
                                   ))))
   (define expt-0-0
     (prim2 expt
