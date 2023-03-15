@@ -132,6 +132,13 @@
 (define *-2-1
   (ext2 * 2 1))
 
+;; Errata correction
+(define *-1-1
+ (ext2 * 1 1))
+‍
+(define *-2-1
+ (ext2 *-1-1 2 1))
+
 ;; behaves the same
 (let
     ((p #(#(3 4 5) #(7 8 9)))
