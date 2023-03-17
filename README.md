@@ -35,3 +35,9 @@ Need to update racket to find `libzmq.5.dylib` according to [this issue](https:/
 ## Generate Jupyter Notebook
 
     jupytext *.ss --to notebook --set-kernel racket --update
+
+## Extra Implementation
+
+- Extend function in interlude I
+- Naive implementation of gradient descent in appendix, without definint tensors
+- Correlate in Chapter 13
